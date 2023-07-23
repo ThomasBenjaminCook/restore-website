@@ -60,7 +60,7 @@ def login():
             personform.personname.data = ""
             personform.occupation.data = ""
 
-    if(selected_name == 'nothing'):
+    if(selected_name == 'nothing' and request.cookies.get('User_Name') is None):
         return render_template_string(lines1, personform=personform)
 
     if(request.cookies.get('User_Name') is None):
