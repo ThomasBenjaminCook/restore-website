@@ -29,7 +29,7 @@
             <option value="explorer">
             <option value="landowner">
         </datalist><br><br>
-        {{ personform.submitted() }}
+        {{ personform.submitter() }}
     </fieldset>
     </form>
 
