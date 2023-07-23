@@ -21,6 +21,23 @@ class Adder(FlaskForm):
     occupation = StringField()
     submitter = SubmitField('Submit')
 
+class Regi(FlaskForm):
+    title = StringField()
+    description = StringField()
+    submitagain = SubmitField('Submit')
+
+with open(THIS_FOLDER / "page1.txt") as f:
+    lines1 = f.readlines()
+lines1 = (" ").join(lines1)
+
+with open(THIS_FOLDER / "page2.txt") as f:
+    lines2 = f.readlines()
+lines2 = (" ").join(lines2)
+
+with open(THIS_FOLDER / "register_land_form.txt") as f:
+    lines3 = f.readlines()
+lines3 = (" ").join(lines3)
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'REDACTED_SECRET_KEY'
 
@@ -35,14 +52,6 @@ app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 datasource = SQLAlchemy(app)
-
-with open(THIS_FOLDER / "page1.txt") as f:
-    lines1 = f.readlines()
-lines1 = (" ").join(lines1)
-
-with open(THIS_FOLDER / "page2.txt") as f:
-    lines2 = f.readlines()
-lines2 = (" ").join(lines2)
 
 @app.route("/", methods = ["GET","POST"])
 def login():
@@ -77,8 +86,21 @@ def login():
     
 @app.route("/main", methods = ["GET","POST"])
 def home():
-
     if(request.cookies.get('User_Name') is None):
         return redirect("https://restore-thomasappmaker.pythonanywhere.com")
+    
     else:
-        return(stringinserter(lines2,[request.cookies.get('User_Name'),request.cookies.get('User_Occupation')]))
+        insertables = [request.cookies.get('User_Name'),request.cookies.get('User_Occupation')]
+
+        islandowner = False
+        if(request.cookies.get('User_Occupation') == "landowner"):
+            insertables.append(lines3)
+            islandowner = True
+            regform = Regi()
+        else:
+            insertables.append("</br>")
+
+        if(islandowner):
+            return render_template_string(stringinserter(lines2,insertables), regform = regform)
+        else:
+            return(stringinserter(lines2,insertables))

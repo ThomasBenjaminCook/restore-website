@@ -1,0 +1,20 @@
+<div id="landowner>
+<form method="POST">
+<fieldset>
+
+<legend>Register New Land</legend>
+
+        <label for="namein">What do you want to call it?:</label> 
+        {{ regform.hidden_tag() }} 
+        {{ regform.title(autocomplete="off") }}
+        <br><br>
+
+        <label for="descin">Describe the Land:</label> 
+        {{ regform.hidden_tag() }} 
+        {{ regform.title(autocomplete="off") }} 
+
+        {{ regform.submitagain() }}
+
+</fieldset>
+</form>
+</div>
