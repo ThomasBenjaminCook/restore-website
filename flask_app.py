@@ -19,7 +19,7 @@ def stringinserter(string, insertables):
 class Adder(FlaskForm):
     personname = StringField()
     occupation = StringField()
-    submitted = SubmitField('Submit')
+    submitter = SubmitField('Submit')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'REDACTED_SECRET_KEY'
