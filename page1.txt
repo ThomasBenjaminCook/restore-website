@@ -19,17 +19,17 @@
     <fieldset>
         <legend>New User</legend>
         <label for="namein">Name:</label> 
-        {{ add_form.hidden_tag() }} 
-        {{ add_form.personname(autocomplete="off") }}<br><br>
+        {{ personform.hidden_tag() }} 
+        {{ personform.personname(autocomplete="off") }}<br><br>
         <label for="jobin">Occupation:</label> 
-        {{ add_form.hidden_tag() }} 
-        {{ add_form.occupation(class="form-control", list="optioner", autocomplete="off") }} 
+        {{ personform.hidden_tag() }} 
+        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }} 
         <datalist id="optioner">
             <option value="tourist">
             <option value="explorer">
             <option value="landowner">
         </datalist><br><br>
-        {{ new_person.submitted() }}
+        {{ personform.submitted() }}
     </fieldset>
     </form>
 
