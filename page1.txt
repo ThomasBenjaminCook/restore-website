@@ -1,54 +1,38 @@
-<style type="text/css">
+<head>
 
-body {
-    text-align: center;
-}
-form {
-    display: inline-block;
-}
+  <title>Login</title>
 
-h1{
-    font-size: 5vh;
-}
+  <style>
 
-h2{
-    font-size: 4vh;
-}
+    body {
+        padding: 0%;
+        margin: 0%;
+    }
+    
+  </style>
 
-input{
-    width: 60vw;
-    padding: 5vh 2vw;
-    -webkit-appearance: none;
-    background-color: white;
-    color: black;
-    border: 1vw solid black;
-    font-size: 3vh;
-}
+</head>
 
-</style>
-
-<h1>
-    Welcome to WattApp
-</h1>
-<h2>
-    Click your energy provider.
-</h2>
 <body>
-<form method="post" action="/">
-    </br>
-    <input type="submit" value="AGL" name="action1"/>
-    </br></br>
-    <input type="submit" value="Origin Energy" name="action2"/>
-    </br></br>
-    <input type="submit" value="Red Energy" name="action3"/>
-    </br></br>
-    <input type="submit" value="EnergyAustralia" name="action4"/>
-    </br></br>
-    <input type="submit" value="ActewAGL" name="action5"/>
-    </br></br>
-    <input type="submit" value="None of the Above" name="action6"/>
-    </br></br>
-    <input type="submit" value="I don't know" name="action7"/>
-</form>
-</body>
 
+    <form method="POST">
+    <fieldset>
+        <legend>New User</legend>
+        <label for="namein">Name:</label> 
+        {{ add_form.hidden_tag() }} 
+        {{ add_form.personname(autocomplete="off") }}<br><br>
+        <label for="jobin">Occupation:</label> 
+        {{ add_form.hidden_tag() }} 
+        {{ add_form.occupation(class="form-control", list="optioner", autocomplete="off") }} 
+        <datalist id="optioner">
+            <option value="tourist">
+            <option value="explorer">
+            <option value="landowner">
+        </datalist><br><br>
+        {{ new_person.submitted() }}
+    </fieldset>
+    </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
