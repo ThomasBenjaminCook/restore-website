@@ -1,0 +1,54 @@
+<style type="text/css">
+
+body {
+    text-align: center;
+}
+form {
+    display: inline-block;
+}
+
+h1{
+    font-size: 5vh;
+}
+
+h2{
+    font-size: 4vh;
+}
+
+input{
+    width: 60vw;
+    padding: 5vh 2vw;
+    -webkit-appearance: none;
+    background-color: white;
+    color: black;
+    border: 1vw solid black;
+    font-size: 3vh;
+}
+
+</style>
+
+<h1>
+    Welcome to WattApp
+</h1>
+<h2>
+    Click your energy provider.
+</h2>
+<body>
+<form method="post" action="/">
+    </br>
+    <input type="submit" value="AGL" name="action1"/>
+    </br></br>
+    <input type="submit" value="Origin Energy" name="action2"/>
+    </br></br>
+    <input type="submit" value="Red Energy" name="action3"/>
+    </br></br>
+    <input type="submit" value="EnergyAustralia" name="action4"/>
+    </br></br>
+    <input type="submit" value="ActewAGL" name="action5"/>
+    </br></br>
+    <input type="submit" value="None of the Above" name="action6"/>
+    </br></br>
+    <input type="submit" value="I don't know" name="action7"/>
+</form>
+</body>
+
