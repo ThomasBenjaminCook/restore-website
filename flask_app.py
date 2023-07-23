@@ -1,5 +1,5 @@
 import pandas
-from flask import Flask, request, redirect, make_response, render_template_string
+from flask import Flask, request, redirect, render_template_string, after_this_request
 from pathlib import Path
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -64,10 +64,14 @@ def login():
         return render_template_string(lines1, personform=personform)
 
     if(request.cookies.get('User_Name') is None):
-        response_object = make_response(lines1)
-        response_object.set_cookie("User_Name", value = selected_name, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
-        response_object.set_cookie("User_Occupation", value = selected_occ, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
-        return response_object
+
+        @after_this_request
+        def add_cookie(response_object):
+            response_object.set_cookie("User_Name", value = selected_name, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
+            response_object.set_cookie("User_Occupation", value = selected_occ, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
+            return response_object
+        
+        return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
     else:
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
     
