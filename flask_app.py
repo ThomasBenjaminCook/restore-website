@@ -44,14 +44,6 @@ with open(THIS_FOLDER / "page2.txt") as f:
     lines2 = f.readlines()
 lines2 = (" ").join(lines2)
 
-@app.route("/main", methods = ["GET","POST"])
-def home():
-
-    if(request.cookies.get('User_Name') is None):
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com")
-    else:
-        return(lines2)
-
 @app.route("/", methods = ["GET","POST"])
 def login():
 
@@ -63,8 +55,10 @@ def login():
             selected_name = personform.personname.data
             selected_occ = personform.occupation.data
             personform.personname.data = ""
+            personform.occupation.data = ""
         else:
             personform.personname.data = ""
+            personform.occupation.data = ""
 
     if(selected_name == 'nothing'):
         return render_template_string(lines1, personform=personform)
@@ -76,3 +70,11 @@ def login():
         return response_object
     else:
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
+    
+@app.route("/main", methods = ["GET","POST"])
+def home():
+
+    if(request.cookies.get('User_Name') is None):
+        return redirect("https://restore-thomasappmaker.pythonanywhere.com")
+    else:
+        return(stringinserter(lines2,[request.cookies.get('User_Name'),request.cookies.get('User_Occupation')]))
