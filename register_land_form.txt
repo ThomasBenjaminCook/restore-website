@@ -4,7 +4,7 @@
 
 <legend>Register New Land</legend>
 
-        <label for="namein">Name the land:</label> 
+        <label for="namein">Apply Now:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
         <br><br>
@@ -12,7 +12,7 @@
         <label for="descin">Describe the land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }} 
-
+        </br></br>
         {{ regform.submitagain() }}
 
 </fieldset>

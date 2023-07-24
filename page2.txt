@@ -40,6 +40,13 @@
       font-size: 150%;
       width: 75vw;
     }
+
+    .formstyle {
+      outline: none;
+      margin: auto;
+      text-align: center;
+      font-size: 100%;
+    }
     
   </style>
 
