@@ -46,7 +46,7 @@
 
 </head>
 
-<body>
+<body class="bg">
     </br></br>
     <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
 
