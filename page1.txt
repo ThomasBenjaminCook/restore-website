@@ -34,11 +34,10 @@
       outline: none;
       margin: auto;
       text-align: center;
-      font-size: 150%;
+      font-size: 100%;
     }
 
     input[type=text] {
-      height: 7vh;
       border: 1% solid black;
   }
     
