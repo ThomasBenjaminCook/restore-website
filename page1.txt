@@ -19,6 +19,7 @@
 
     .formstyle {
       border: none;
+      outline: none;
     }
     
   </style>
@@ -30,7 +31,7 @@
     <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
 
     <form method="POST" class="formstyle">
-    <fieldset>
+    <fieldset class="formstyle">
         <label for="namein">My name is </label> 
         {{ personform.hidden_tag() }} 
         {{ personform.personname(autocomplete="off") }}
