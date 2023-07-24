@@ -40,15 +40,22 @@
     input[type=text] {
       border: 1% solid black;
   }
+
+    input[type=button] {
+      width: 100vw;
+      border: 1% solid black;
+      background-color: black;
+      color: white;
+  }
     
   </style>
 
 </head>
 
 <body class="bg">
+    </br>
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/>
     </br></br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
-
     <form method="POST" class="formstyle">
     <fieldset class="formstyle">
         <label for="namein">My name is </label> 
