@@ -4,12 +4,12 @@
 
 <legend>Register New Land</legend>
 
-        <label for="namein">What do you want to call it?:</label> 
+        <label for="namein">Name the land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
         <br><br>
 
-        <label for="descin">Describe the Land:</label> 
+        <label for="descin">Describe the land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }} 
 
