@@ -41,7 +41,7 @@
       border: 1% solid black;
   }
 
-    input[type=button] {
+    input[type=button], input[type=submit] {
       width: 100vw;
       border: 1% solid black;
       background-color: #000000;
