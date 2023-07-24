@@ -14,7 +14,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 60vw;
+      width: 40vw;
     }
     
   </style>
@@ -27,11 +27,10 @@
 
     <form method="POST">
     <fieldset>
-        <legend>New User</legend>
-        <label for="namein">Name:</label> 
+        <label for="namein">My name is </label> 
         {{ personform.hidden_tag() }} 
-        {{ personform.personname(autocomplete="off") }}<br><br>
-        <label for="jobin">Occupation:</label> 
+        {{ personform.personname(autocomplete="off") }}
+        <label for="jobin"> and I'm a </label> 
         {{ personform.hidden_tag() }} 
         {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }} 
         <datalist id="optioner">
