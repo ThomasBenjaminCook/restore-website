@@ -80,9 +80,9 @@ def login():
             response_object.set_cookie("User_Occupation", value = selected_occ, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
             return response_object
         
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
+        return redirect("https://restore-thomasappmaker.pythonanywhere.com/browse")
     else:
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
+        return redirect("https://restore-thomasappmaker.pythonanywhere.com/browse")
     
 @app.route("/browse", methods = ["GET","POST"])
 def browse():
