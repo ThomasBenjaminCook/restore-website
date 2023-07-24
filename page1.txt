@@ -22,6 +22,7 @@
       outline: none;
       margin: auto;
       text-align: center;
+      font-size: 150%;
     }
     
   </style>
@@ -30,7 +31,7 @@
 
 <body>
     </br></br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br>
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/>
 
     <form method="POST" class="formstyle">
     <fieldset class="formstyle">
