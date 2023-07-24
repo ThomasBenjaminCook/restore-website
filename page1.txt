@@ -1,6 +1,7 @@
 <head>
 
   <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
 
   <style>
 
@@ -15,7 +16,7 @@
 
 <body>
 
-    <img src= "{{url_for('static', filename='logo.png')}}" width=10%/></br></br>
+    <img src='logo.png' width=10%/></br></br>
 
     <form method="POST">
     <fieldset>
