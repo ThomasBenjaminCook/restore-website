@@ -38,7 +38,7 @@
       margin: auto;
       text-align: center;
       font-size: 100%;
-      width: 50vw;
+      width: 75vw;
     }
     
   </style>
@@ -47,10 +47,11 @@
 
 <body class="bg">
 
-</br></br></br>
+</br></br>
 <div id="welcomebox">
-Welcome, @ the @. </br></br>
+Welcome, <b>@</b> the <b>@</b>. 
 </div>
+</br></br>
 
 @
 
