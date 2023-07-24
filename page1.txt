@@ -20,6 +20,9 @@
     .formstyle {
       border: none;
       outline: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     
   </style>
