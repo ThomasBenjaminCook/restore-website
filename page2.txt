@@ -51,9 +51,10 @@
 
     #dotpoints {
       background-color: white;
-      background-color: #000000;
+      color: #000000;
       color: white;
       border-radius: 10%;
+      width: 60vw;
     }
     
   </style>
