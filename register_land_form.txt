@@ -1,6 +1,6 @@
 <div id="landowner>
-<form method="POST" class="formstyle">
-<fieldset class="formstyle">
+<form method="POST">
+<fieldset>
 
 <legend>Register New Land</legend>
 
