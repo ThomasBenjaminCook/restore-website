@@ -42,8 +42,8 @@
   }
 
     input[type=button], input[type=submit] {
-      width: 10vw;
-      height: 8vh;
+      width: 30vw;
+      height: 4vh;
       border: 1% solid black;
       background-color: #000000;
       color: white;
