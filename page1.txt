@@ -1,7 +1,7 @@
 <head>
 
   <title>Login</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/static/logo.png">
 
   <style>
 
@@ -16,7 +16,7 @@
 
 <body>
 
-    <img src='logo.png' width=10%/></br></br>
+    <img src="{{url_for('static', filename='logo.png')}}" width=10%/></br></br>
 
     <form method="POST">
     <fieldset>
