@@ -50,9 +50,9 @@
     }
 
     #dotpoints {
+      margin: auto;
       background-color: white;
       color: #000000;
-      color: white;
       border-radius: 10%;
       width: 60vw;
     }
