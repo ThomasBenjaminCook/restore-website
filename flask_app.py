@@ -84,8 +84,8 @@ def login():
     else:
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/main")
     
-@app.route("/main", methods = ["GET","POST"])
-def home():
+@app.route("/browse", methods = ["GET","POST"])
+def browse():
     if(request.cookies.get('User_Name') is None):
         return redirect("https://restore-thomasappmaker.pythonanywhere.com")
     
