@@ -8,6 +8,19 @@
     body {
         padding: 0%;
         margin: 0%;
+        height: 100%;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    .bg {
+      background-image: url("/static/background.png");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     #landowner {
@@ -18,16 +31,25 @@
       background-color: rgba(50,255,10,0.3);
       padding: 1.5%;
     }
+
+    #welcomebox {
+      border: none;
+      outline: none;
+      margin: auto;
+      text-align: center;
+      font-size: 100%;
+      width: 50vw;
+    }
     
   </style>
 
 </head>
 
-<body>
+<body class="bg">
 
-Restore (and More) </br></br>
-
-Welcome @ the @. </br></br>
+<div id="welcomebox">
+Welcome, @ the @. </br></br>
+</div>
 
 @
 
