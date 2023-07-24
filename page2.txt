@@ -1,6 +1,6 @@
 <head>
 
-  <title>Login</title>
+  <title>Browse</title>
 
   <style>
 

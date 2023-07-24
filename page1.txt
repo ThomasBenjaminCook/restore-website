@@ -15,7 +15,7 @@
 
 <body>
 
-    <img src= "{{url_for('static', filename='logo.jpg')}}" width=25%/>
+    <img src= "{{url_for('static', filename='logo.png')}}" width=10%/></br></br>
 
     <form method="POST">
     <fieldset>
