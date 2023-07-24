@@ -37,9 +37,8 @@
       outline: none;
       margin: auto;
       text-align: center;
-      font-size: 100%;
+      font-size: 150%;
       width: 75vw;
-      height: 10vh;
     }
     
   </style>
