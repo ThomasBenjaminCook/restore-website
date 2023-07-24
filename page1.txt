@@ -26,8 +26,8 @@
     }
 
     input[type=text] {
-      height: 10%;
-      border: 2px solid black;
+      height: 7vh;
+      border: 1% solid black;
   }
     
   </style>
@@ -36,7 +36,7 @@
 
 <body>
     </br></br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/>
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
 
     <form method="POST" class="formstyle">
     <fieldset class="formstyle">
