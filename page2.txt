@@ -41,7 +41,7 @@
       width: 75vw;
     }
 
-    .formstyle {
+    .farmform {
       outline: none;
       margin: auto;
       text-align: center;
