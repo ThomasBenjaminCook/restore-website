@@ -20,12 +20,8 @@
     .formstyle {
       border: none;
       outline: none;
-    }
-
-    .formcontainer {
-      text-align: center;
       margin: auto;
-      width: 40vw;
+      text-align: center;
     }
     
   </style>
@@ -34,9 +30,8 @@
 
 <body>
     </br></br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br>
 
-    <div id="formcontainer">
     <form method="POST" class="formstyle">
     <fieldset class="formstyle">
         <label for="namein">My name is </label> 
@@ -53,7 +48,6 @@
         {{ personform.submitter() }}
     </fieldset>
     </form>
-    </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
