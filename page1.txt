@@ -44,7 +44,7 @@
     input[type=button] {
       width: 100vw;
       border: 1% solid black;
-      background-color: black;
+      background-color: #000000;
       color: white;
   }
     
