@@ -63,7 +63,7 @@
       border-radius: 20px;
       text-align: center;
       border: 1% solid black;
-      right-padding: 10%;
+      padding-right: 10%;
     }
 
     #dotpointsleft {
@@ -77,7 +77,7 @@
       border-radius: 20px;
       text-align: center;
       border: 1% solid black;
-      left-padding: 10%;
+      padding-left: 10%;
     }
     
   </style>
