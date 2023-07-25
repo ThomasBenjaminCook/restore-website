@@ -108,5 +108,5 @@ def browse():
             return(stringinserter(lines2,insertables))
         
 @app.route("/confirmation")
-def browse():
+def confirm():
     return("Registration successful!")
