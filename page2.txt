@@ -49,10 +49,24 @@
       width: 60vw;
     }
 
-    #dotpoints {
-      margin: auto;
-      background-color: white;
-      color: #000000;
+    #dotpointsright {
+      position: absolute;
+      right: 1px;
+      background-color: #000000;
+      color: white;
+      width: 60vw;
+      -moz-border-radius: 10%;
+      -webkit-border-radius: 10%;
+      border-radius: 10%;
+      text-align: center;
+      border: 1% solid black;
+    }
+
+    #dotpointsleft {
+      position: absolute;
+      left: 1px;
+      background-color: #000000;
+      color: white;
       width: 60vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
