@@ -2,26 +2,22 @@
 
 <div id="dotpointsright"><b>Step 2 - review</b></br></br>Our expert team will review your application, and build a tailored program to suit your needs.</br></br></div></br></br></br></br></br></br></br></br>
 
-<div id="dotpointsleft"><b>Step 3 - setup</b></br></br>Restore and more will provide one-on-one support and funding to set up infrastructure on your land.</br></br></div></br></br></br></br></br></br>
+<div id="dotpointsleft"><b>Step 3 - setup</b></br></br>Restore and more will provide one-on-one support and funding to set up infrastructure on your land.</br></br></div></br></br></br></br>
 
 </br></br></br></br>
 
 <div id="landowner>
 
-So @, are you ready?
-
 <form method="POST" class="farmform">
+So @, are you ready?
 <fieldset>
 
         <label for="namein">Name the Land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
-        <br><br>
-
         <label for="descin">Describe the land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }} 
-        </br></br>
         {{ regform.submitagain() }}
 
 </fieldset>
