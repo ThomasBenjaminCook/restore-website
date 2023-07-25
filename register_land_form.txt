@@ -12,7 +12,7 @@
 
 <legend>Register New Land</legend>
 
-        <label for="namein">Apply Now:</label> 
+        <label for="namein">Name the Land:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
         <br><br>
