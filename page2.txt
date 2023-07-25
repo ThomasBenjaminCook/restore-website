@@ -51,6 +51,7 @@
       border: none;
       outline: none;
       background-color: #000000;
+      color: white;
     }
 
     #dotpointsright {
@@ -79,6 +80,7 @@
       text-align: center;
       border: 1% solid black;
       padding-left: 15vw;
+      padding-right: 6vw;
     }
     
   </style>
