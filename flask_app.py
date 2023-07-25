@@ -92,6 +92,7 @@ def browse():
     else:
         regform = Regi()
         if(regform.validate_on_submit() and regform.submitagain.data):
+            print("HI")
             return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
 
         insertables = [request.cookies.get('User_Name'),request.cookies.get('User_Occupation')]
