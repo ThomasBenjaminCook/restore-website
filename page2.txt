@@ -51,7 +51,7 @@
 
     #dotpointsright {
       position: absolute;
-      right: 1px;
+      right: -10%;
       background-color: #000000;
       color: white;
       width: 60vw;
@@ -64,7 +64,7 @@
 
     #dotpointsleft {
       position: absolute;
-      left: 1px;
+      left: -10%;
       background-color: #000000;
       color: white;
       width: 60vw;
