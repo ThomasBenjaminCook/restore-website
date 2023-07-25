@@ -1,4 +1,4 @@
-<div id="dotpointsleft"><b>Step 1 - tell us about your land</b></br></br>Tell us about your land! Explain your location, natural features, size, and any other details that you think we might be interested in.</br></br></div></br></br></br></br></br></br></br></br></br>
+<div id="dotpointsleft"><b>Step 1 - tell us about your land</b></br></br>Tell us about your land! Explain your location, natural features, size, and any other details that you think we might be interested in.</br></br></div></br></br></br></br></br></br></br></br></br></br>
 
 <div id="dotpointsright"><b>Step 2 - review</b></br></br>Our expert team will review your application, and build a tailored program to suit your needs.</br></br></div></br></br></br></br></br></br></br></br>
 
@@ -11,10 +11,10 @@
 <form method="POST" class="farmform">
 So @, are you ready? Register now:</br></br>
 <fieldset>
-        <label for="namein"></br>Location:</label>
+        <label for="title">Location:</label>
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
-        <label for="descin"></br>Description:</label> 
+        <label for="description"></br>Description:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.description(autocomplete="off") }} 
         {{ regform.submitagain() }}
