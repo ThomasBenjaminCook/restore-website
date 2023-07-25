@@ -55,7 +55,7 @@
       right: -10%;
       background-color: #000000;
       color: white;
-      width: 60vw;
+      width: 40vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
       border-radius: 10px;
@@ -68,7 +68,7 @@
       left: -10%;
       background-color: #000000;
       color: white;
-      width: 60vw;
+      width: 40vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
       border-radius: 10px;
