@@ -1,8 +1,10 @@
-<div id="dotpointsleft"><b>Step 1</b></br></br>Hello my name is Tom.</br></br></div></br></br></br></br>
+<div id="dotpointsleft"><b>Step 1</b></br></br>Hello my name is Tom.</br></br></br></br></div></br></br></br></br>
 
-<div id="dotpointsright"><b>Step 2</b></br></br>Hello my name is Minecraft.</br></br></div></br></br></br></br>
+<div id="dotpointsright"><b>Step 2</b></br></br>Hello my name is Minecraft.</br></br></br></br></div></br></br></br></br>
 
-<div id="dotpointsleft"><b>Step 2</b></br></br>Hello my name is Minecraft Steve.</br></br></div></br></br></br></br>
+<div id="dotpointsleft"><b>Step 2</b></br></br>Hello my name is Minecraft Steve.</br></br></br></br></div></br></br></br></br>
+
+</br></br></br></br>
 
 <div id="landowner>
 <form method="POST" class="farmform">

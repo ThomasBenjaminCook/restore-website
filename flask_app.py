@@ -97,6 +97,8 @@ def browse():
             insertables.append(lines3)
             islandowner = True
             regform = Regi()
+            if(regform.validate_on_submit() and regform.submitagain.data):
+                return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
         else:
             insertables.append("</br>")
 
@@ -104,3 +106,7 @@ def browse():
             return render_template_string(stringinserter(lines2,insertables), regform = regform)
         else:
             return(stringinserter(lines2,insertables))
+        
+@app.route("/confirmation")
+def browse():
+    return("Registration successful!")
