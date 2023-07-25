@@ -50,6 +50,7 @@
       width: 60vw;
       border: none;
       outline: none;
+      background-color: #000000;
     }
 
     #dotpointsright {
@@ -63,7 +64,7 @@
       border-radius: 20px;
       text-align: center;
       border: 1% solid black;
-      padding-right: 10%;
+      padding-right: 15vw;
     }
 
     #dotpointsleft {
@@ -77,7 +78,7 @@
       border-radius: 20px;
       text-align: center;
       border: 1% solid black;
-      padding-left: 10%;
+      padding-left: 15vw;
     }
     
   </style>
