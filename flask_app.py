@@ -107,6 +107,6 @@ def browse():
         else:
             return(stringinserter(lines2,insertables))
         
-@app.route("/confirmation")
+@app.route("/confirmation", methods = ["GET","POST"])
 def confirm():
     return("Registration successful!")
