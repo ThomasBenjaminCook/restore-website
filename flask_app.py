@@ -87,7 +87,6 @@ def login():
 @app.route("/browse", methods = ["GET","POST"])
 def browse():
 
-    print("Hi")
     regform = Regi()
     if(regform.validate_on_submit() and regform.submitagain.data):
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
