@@ -9,17 +9,15 @@
 <div id="landowner>
 
 <form method="POST" class="farmform">
-So @, are you ready?
+So @, are you ready? Register now:</br></br>
 <fieldset>
-
-        <label for="namein">Name the Land:</label> 
+        <label for="namein">Location:</br></label>
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
-        <label for="descin">Describe the land:</label> 
+        <label for="descin">Description:</br></label> 
         {{ regform.hidden_tag() }} 
-        {{ regform.title(autocomplete="off") }} 
+        {{ regform.description(autocomplete="off") }} 
         {{ regform.submitagain() }}
-
 </fieldset>
 </form>
 </div>
