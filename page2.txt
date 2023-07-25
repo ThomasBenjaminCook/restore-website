@@ -47,7 +47,7 @@
       margin: auto;
       text-align: center;
       font-size: 100%;
-      width: 60vw;
+      width: 99vw;
       border: none;
       outline: none;
       background-color: #000000;

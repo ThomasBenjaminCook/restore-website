@@ -98,7 +98,7 @@ def browse():
 
         islandowner = False
         if(request.cookies.get('User_Occupation') == "landowner"):
-            insertables.append(lines3)
+            insertables.append(stringinserter(lines3,[request.cookies.get('User_Name')]))
             islandowner = True
         else:
             insertables.append("</br>")
