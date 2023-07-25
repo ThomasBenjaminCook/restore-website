@@ -60,9 +60,10 @@
       width: 50vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 10px;
+      border-radius: 20px;
       text-align: center;
       border: 1% solid black;
+      right-padding: 10%;
     }
 
     #dotpointsleft {
@@ -73,9 +74,10 @@
       width: 50vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 10px;
+      border-radius: 20px;
       text-align: center;
       border: 1% solid black;
+      left-padding: 10%;
     }
     
   </style>
