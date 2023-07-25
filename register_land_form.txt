@@ -11,10 +11,10 @@
 <form method="POST" class="farmform">
 So @, are you ready? Register now:</br></br>
 <fieldset>
-        <label for="namein">Location:</br></label>
+        <label for="namein"></br>Location:</label>
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
-        <label for="descin">Description:</br></label> 
+        <label for="descin"></br>Description:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.description(autocomplete="off") }} 
         {{ regform.submitagain() }}
