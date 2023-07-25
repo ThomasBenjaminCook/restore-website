@@ -90,6 +90,7 @@ def browse():
         return redirect("https://restore-thomasappmaker.pythonanywhere.com")
     
     else:
+        regform = Regi()
         if(regform.validate_on_submit() and regform.submitagain.data):
             return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
 
@@ -99,7 +100,6 @@ def browse():
         if(request.cookies.get('User_Occupation') == "landowner"):
             insertables.append(lines3)
             islandowner = True
-            regform = Regi()
         else:
             insertables.append("</br>")
 
