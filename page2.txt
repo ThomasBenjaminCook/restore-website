@@ -58,7 +58,7 @@
       width: 60vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 10%;
+      border-radius: 10px;
       text-align: center;
       border: 1% solid black;
     }
@@ -71,7 +71,7 @@
       width: 60vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 10%;
+      border-radius: 10px;
       text-align: center;
       border: 1% solid black;
     }
