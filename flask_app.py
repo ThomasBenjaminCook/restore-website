@@ -88,9 +88,7 @@ def login():
 def browse():
 
     regform = Regi()
-    print(regform.validate_on_submit())
-    print(regform.submitagain.data)
-    if(regform.validate_on_submit() and regform.submitagain.data):
+    if(request.form.get("brojustsubmitted")):
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
 
     if(request.cookies.get('User_Name') is None):
