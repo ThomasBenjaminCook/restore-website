@@ -9,8 +9,8 @@
 <div id="landowner>
 
 <form action="" method="POST" class="farmform">
-So @, are you ready? Register now:</br></br>
-<fieldset>
+</br>So @, are you ready? Register now:</br></br>
+<fieldset class="farmform">
         <label for="title">Location:</label>
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
