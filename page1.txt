@@ -43,6 +43,7 @@
       border: none;
       border-bottom: 2px solid green;
       background: rgba(255,255,255,0.01);
+      height: 100%;
   }
 
     input[type=button], input[type=submit] {
@@ -66,13 +67,9 @@
         <label for="namein">My name is </label> 
         {{ personform.hidden_tag() }} 
         {{ personform.personname(autocomplete="off") }}
-        <label for="jobin"> and I'm a </label> 
+        <label for="jobin"></br>and I'm a </label> 
         {{ personform.hidden_tag() }} 
-        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }} 
-        <datalist id="optioner">
-            <option value="tourist">
-            <option value="landowner">
-        </datalist>.<br><br>
+        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }}<datalist id="optioner"><option value="tourist"><option value="landowner"></datalist>.<br><br>
         {{ personform.submitter() }}
     </fieldset>
     </form>
