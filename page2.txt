@@ -103,7 +103,7 @@
       width: 20%;
       border-radius: 15px; 
       position: absolute;
-      float: left;
+      left: 1%;
     }
 
     #title {
@@ -114,7 +114,7 @@
 
     #descri {
       position: absolute;
-      float: right;
+      right: 1%;
       width: 50%;
     }
 
