@@ -1,12 +1,21 @@
 <div id="welcomebox">
 Check out some great destinations!
 </div>
+
 </br>
 <div class="destination"><b><div id="title">Sustainable Farming Experience</div></b></br></br>
 <div><img src="{{url_for('static', filename='image1.jpg')}}" class='destinationimage'/></div><div id="descri">This is a thrilling experience of a lifetime. Do not miss out.</div>
-</br></br></br></br></br></br>
+</br></br></br></br></br>
 </div>
 </br>
-<div class="destination">Hello</div>
+
+<div class="destination"><b><div id="title">Plant a Tree</div></b></br></br>
+<div><img src="{{url_for('static', filename='image2.jpg')}}" class='destinationimage'/></div><div id="descri">Plant a tree today and save the planet.</div>
+</br></br></br></br></br>
+</div>
+
 </br>
-<div class="destination">Hello</div>
+<div class="destination"><b><div id="title">Carbon Offset Program</div></b></br></br>
+<div><img src="{{url_for('static', filename='image3.jpg')}}" class='destinationimage'/></div><div id="descri">This program will allow you to offset travel related emissions.</div>
+</br></br></br></br></br>
+</div>
