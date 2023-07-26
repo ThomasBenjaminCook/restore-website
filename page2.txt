@@ -121,6 +121,7 @@
       background: rgba(255,255,255,0.01);
       font-size: 90%;
       width: 30vw;
+      color: white;
     }
 
     input[type=button], input[type=submit] {
