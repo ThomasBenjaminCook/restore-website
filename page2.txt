@@ -87,15 +87,13 @@
       border: 1% solid black;
     }
 
-    #destnation {
-      margin: auto;
-      right: -10%;
+    .destination {
       background-color: #000000;
       color: white;
       width: 50vw;
       height: 20vh;
       border-radius: 20px;
-      text-align: center;
+      text-align: left;
       border: 1% solid black;
     }
 

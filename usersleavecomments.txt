@@ -3,8 +3,8 @@
 Check out some great destinations!
 </div>
 
-<div id="destination">Hello</div>
+<div class="destination">Hello</div>
 </br>
-<div id="destination">Hello</div>
+<div class="destination">Hello</div>
 </br>
-<div id="destination">Hello</div>
+<div class="destination">Hello</div>
