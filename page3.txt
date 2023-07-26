@@ -1,6 +1,6 @@
 <head>
 
-  <title>Login</title>
+  <title>Confirmation</title>
   <link rel="shortcut icon" href="/static/logo.png">
 
   <style>

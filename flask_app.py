@@ -41,6 +41,10 @@ with open(THIS_FOLDER / "page3.txt") as f:
     lines4 = f.readlines()
 lines4 = (" ").join(lines4)
 
+with open(THIS_FOLDER / "usersleavecomments.txt") as f:
+    lines5 = f.readlines()
+lines5 = (" ").join(lines5)
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'REDACTED_SECRET_KEY'
 
@@ -58,9 +62,7 @@ datasource = SQLAlchemy(app)
 
 @app.route("/", methods = ["GET","POST"])
 def login():
-
     personform = Adder()
-
     selected_name = 'nothing'
     if (personform.validate_on_submit() and personform.submitter.data):
         if((len(personform.personname.data)>1) and (personform.occupation.data in ["tourist","explorer","landowner"])):
@@ -106,7 +108,7 @@ def browse():
             insertables.append(stringinserter(lines3,[request.cookies.get('User_Name')]))
             islandowner = True
         else:
-            insertables.append("</br>")
+            insertables.append(lines5)
 
         if(islandowner):
             return render_template_string(stringinserter(lines2,insertables), regform = regform)
