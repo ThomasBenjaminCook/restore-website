@@ -24,7 +24,6 @@ class Adder(FlaskForm):
 class Regi(FlaskForm):
     title = StringField()
     description = StringField()
-    submitagain = SubmitField('Submit')
 
 with open(THIS_FOLDER / "page1.txt") as f:
     lines1 = f.readlines()

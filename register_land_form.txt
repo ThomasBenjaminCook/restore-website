@@ -17,7 +17,6 @@ So @, are you ready? Register now:</br></br>
         <label for="description"></br>Description:</label> 
         {{ regform.hidden_tag() }} 
         {{ regform.description(autocomplete="off") }} 
-        {{ regform.submitagain() }}
 </fieldset>
 </form>
 <form method='POST'>

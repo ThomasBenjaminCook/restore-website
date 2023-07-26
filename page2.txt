@@ -83,6 +83,10 @@
       padding-right: 6vw;
     }
     
+    input[type=submit] {
+      border: 1% solid black;
+    }
+
   </style>
 
 </head>
