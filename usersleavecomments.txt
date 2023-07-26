@@ -1,2 +1,10 @@
 </br>
-Hello Mr. Tourist
+<div id="welcomebox">
+Check out some great destinations!
+</div>
+
+<div id="destination">Hello</div>
+</br>
+<div id="destination">Hello</div>
+</br>
+<div id="destination">Hello</div>

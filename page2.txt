@@ -87,6 +87,18 @@
       border: 1% solid black;
     }
 
+    #destnation {
+      margin: auto;
+      right: -10%;
+      background-color: #000000;
+      color: white;
+      width: 50vw;
+      height: 20vh;
+      border-radius: 20px;
+      text-align: center;
+      border: 1% solid black;
+    }
+
   </style>
 
 </head>
