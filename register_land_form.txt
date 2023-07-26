@@ -10,7 +10,13 @@
 
 <form action="" method="POST" class="farmform">
 </br>So @, are you ready? Register now:</br></br>
-        </br>Description:
+        </br>Email:
+        {{ regform.hidden_tag() }} 
+        {{ regform.description(autocomplete="off") }}</br></br> 
+        </br></br>Description:
+        {{ regform.hidden_tag() }} 
+        {{ regform.description(autocomplete="off") }}</br></br> 
+        </br></br>Location:
         {{ regform.hidden_tag() }} 
         {{ regform.description(autocomplete="off") }}</br></br> 
 </form>
