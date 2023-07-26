@@ -100,10 +100,10 @@
     }
 
     .destinationimage {
-      width: 20%;
+      width: 40%;
       border-radius: 15px; 
       position: absolute;
-      left: 1%;
+      left: 5%;
     }
 
     #title {
