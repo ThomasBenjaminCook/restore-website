@@ -1,0 +1,64 @@
+<head>
+
+  <title>Login</title>
+  <link rel="shortcut icon" href="/static/logo.png">
+
+  <style>
+
+    body, html {
+      height: 100%;
+      font-size: 200%;
+    }
+
+    .bg {
+      background-image: url("/static/background.png");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    body {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .logoimagestyle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40vw;
+    }
+
+    .formstyle {
+      border: none;
+      outline: none;
+      margin: auto;
+      text-align: center;
+      font-size: 100%;
+    }
+
+    input[type=text] {
+      border: 1% solid black;
+  }
+
+    input[type=button], input[type=submit] {
+      width: 30vw;
+      height: 4vh;
+      border: 1% solid black;
+      background-color: #000000;
+      color: white;
+  }
+    
+  </style>
+
+</head>
+
+<body class="bg">
+    </br>
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
+    Registration successful! Our hardworking team will review your application and be in touch shortly. 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>

@@ -37,6 +37,10 @@ with open(THIS_FOLDER / "register_land_form.txt") as f:
     lines3 = f.readlines()
 lines3 = (" ").join(lines3)
 
+with open(THIS_FOLDER / "page3.txt") as f:
+    lines4 = f.readlines()
+lines4 = (" ").join(lines4)
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'REDACTED_SECRET_KEY'
 
@@ -111,4 +115,4 @@ def browse():
         
 @app.route("/confirmation", methods = ["GET","POST"])
 def confirm():
-    return("Registration successful!")
+    return(lines4)
