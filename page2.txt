@@ -88,9 +88,10 @@
     }
 
     .destination {
+      margin: auto;
       background-color: #000000;
       color: white;
-      width: 50vw;
+      width: 65vw;
       height: 20vh;
       border-radius: 20px;
       text-align: left;
