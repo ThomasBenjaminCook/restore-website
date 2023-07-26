@@ -1,10 +1,10 @@
-<div id="dotpointsleft"></br><b>Step 1 - tell us about your land</b></br></br>Tell us about your land! Explain your location, natural features, size, and any other details that you think we might be interested in.</br></br></div></br></br></br></br></br></br></br></br></br></br></br>
+<div id="dotpointsleft"></br><b>Step 1 - tell us about your land</b></br></br>Tell us about your land! Explain your location, natural features, size, and any other details that you think we might be interested in.</br></br></div></br></br></br></br></br></br></br></br></br></br>
 
 <div id="dotpointsright"></br><b>Step 2 - review</b></br></br>Our expert team will review your application, and build a tailored program to suit your needs.</br></br></div></br></br></br></br></br></br></br></br>
 
 <div id="dotpointsleft"></br><b>Step 3 - setup</b></br></br>Restore and more will provide one-on-one support and funding to set up infrastructure on your land.</br></br></div></br></br></br></br>
 
-</br></br></br></br> </br>
+</br></br></br></br></br>
 
 <div id="landowner>
 
@@ -12,7 +12,7 @@
 </br>So @, are you ready? Register now:</br></br>
         </br>Description:
         {{ regform.hidden_tag() }} 
-        {{ regform.description(autocomplete="off") }} 
+        {{ regform.description(autocomplete="off") }}</br></br> 
 </form>
 </br>
 <form method='POST'>
