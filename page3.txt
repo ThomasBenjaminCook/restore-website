@@ -60,18 +60,7 @@
     </br></br>
     <form method="POST" class="formstyle">
     <fieldset class="formstyle">
-        <label for="namein">My name is </label> 
-        {{ personform.hidden_tag() }} 
-        {{ personform.personname(autocomplete="off") }}
-        <label for="jobin"> and I'm a </label> 
-        {{ personform.hidden_tag() }} 
-        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }} 
-        <datalist id="optioner">
-            <option value="tourist">
-            <option value="explorer">
-            <option value="landowner">
-        </datalist>.<br><br>
-        {{ personform.submitter() }}
+        <label for="namein">Registration successful! Our hardworking team will review your application and be in touch shortly.</label> 
     </fieldset>
     </form>
 
