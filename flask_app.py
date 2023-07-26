@@ -113,6 +113,7 @@ def browse():
         if(islandowner):
             return render_template_string(stringinserter(lines2,insertables), regform = regform)
         else:
+            print(stringinserter(lines2,insertables))
             return(stringinserter(lines2,insertables))
         
 @app.route("/confirmation", methods = ["GET","POST"])
