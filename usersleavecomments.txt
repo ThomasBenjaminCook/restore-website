@@ -1,11 +1,10 @@
-</br>
 <div id="welcomebox">
 Check out some great destinations!
 </div>
 </br>
 <div class="destination"><b><div id="title">Sustainable Farming Experience</div></b></br></br>
-<div><img src="{{url_for('static', filename='image1.jpg')}}" class='destinationimage'/></div><div id="descri">This is a thrilling experience of a lifetime.</div>
-</br></br></br></br>
+<div><img src="{{url_for('static', filename='image1.jpg')}}" class='destinationimage'/></div><div id="descri">This is a thrilling experience of a lifetime. Do not miss out.</div>
+</br></br></br></br></br></br>
 </div>
 </br>
 <div class="destination">Hello</div>

@@ -100,7 +100,7 @@
     }
 
     .destinationimage {
-      width: 40%;
+      width: 35%;
       border-radius: 15px; 
       position: absolute;
       left: 5%;
@@ -114,7 +114,7 @@
 
     #descri {
       position: absolute;
-      right: 1%;
+      right: 5%;
       width: 50%;
     }
 
