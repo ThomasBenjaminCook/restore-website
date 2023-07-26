@@ -42,6 +42,7 @@
       box-sizing: border-box;
       border: none;
       border-bottom: 2px solid green;
+      background: rgba(255,255,255,0.01);
   }
 
     input[type=button], input[type=submit] {
