@@ -3,7 +3,8 @@
 Check out some great destinations!
 </div>
 
-<div class="destination">Hello</div>
+</br>
+<div class="destination">Hello<img src="{{url_for('static', filename='image1.png')}}" class="logoimagestyle"/></div>
 </br>
 <div class="destination">Hello</div>
 </br>
