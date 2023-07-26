@@ -3,8 +3,8 @@
 Check out some great destinations!
 </div>
 </br>
-<div class="destination"><b>Sustainable Farming Experience</b></br></br>
-<div><img src="{{url_for('static', filename='image1.jpg')}}" class='destinationimage'/></div><div>This is a thrilling experience of a lifetime.</div>
+<div class="destination"><b><div id="title">Sustainable Farming Experience</div></b></br></br>
+<div><img src="{{url_for('static', filename='image1.jpg')}}" class='destinationimage'/></div><div id="descri">This is a thrilling experience of a lifetime.</div>
 </br>
 </div>
 </br>

@@ -96,11 +96,26 @@
       text-align: left;
       border: 1% solid black;
       padding: 5vw;
+      position: relative;
     }
 
     .destinationimage {
-      width: 10vw;
+      width: 20%;
       border-radius: 15px; 
+      position: absolute;
+      float: left;
+    }
+
+    #title {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+    }
+
+    #descri {
+      position: absolute;
+      float: right;
+      width: 50%;
     }
 
   </style>
