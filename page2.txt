@@ -62,7 +62,7 @@
       width: 50vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 20px;
+      border-radius: 40px;
       text-align: center;
       border: 1% solid black;
       padding-right: 15vw;
@@ -76,7 +76,7 @@
       width: 50vw;
       -moz-border-radius: 10%;
       -webkit-border-radius: 10%;
-      border-radius: 20px;
+      border-radius: 40px;
       text-align: center;
       border: 1% solid black;
       padding-left: 15vw;
