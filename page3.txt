@@ -56,8 +56,24 @@
 
 <body class="bg">
     </br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/></br></br>
-    Registration successful! Our hardworking team will review your application and be in touch shortly. 
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/>
+    </br></br>
+    <form method="POST" class="formstyle">
+    <fieldset class="formstyle">
+        <label for="namein">My name is </label> 
+        {{ personform.hidden_tag() }} 
+        {{ personform.personname(autocomplete="off") }}
+        <label for="jobin"> and I'm a </label> 
+        {{ personform.hidden_tag() }} 
+        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }} 
+        <datalist id="optioner">
+            <option value="tourist">
+            <option value="explorer">
+            <option value="landowner">
+        </datalist>.<br><br>
+        {{ personform.submitter() }}
+    </fieldset>
+    </form>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

@@ -115,4 +115,5 @@ def browse():
         
 @app.route("/confirmation", methods = ["GET","POST"])
 def confirm():
-    return(lines4)
+    personform = Adder()
+    return render_template_string(lines4, personform=personform)
