@@ -88,6 +88,8 @@ def login():
 def browse():
 
     regform = Regi()
+    print(regform.validate_on_submit())
+    print(regform.submitagain.data)
     if(regform.validate_on_submit() and regform.submitagain.data):
         return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
 

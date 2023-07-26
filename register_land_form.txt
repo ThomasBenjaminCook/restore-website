@@ -8,8 +8,9 @@
 
 <div id="landowner>
 
-<form method="POST" class="farmform">
+<form action="" method="POST" class="farmform">
 So @, are you ready? Register now:</br></br>
+<fieldset>
         <label for="title">Location:</label>
         {{ regform.hidden_tag() }} 
         {{ regform.title(autocomplete="off") }}
@@ -17,5 +18,6 @@ So @, are you ready? Register now:</br></br>
         {{ regform.hidden_tag() }} 
         {{ regform.description(autocomplete="off") }} 
         {{ regform.submitagain() }}
+</fieldset>
 </form>
 </div>
