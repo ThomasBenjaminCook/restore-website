@@ -4,7 +4,7 @@ Check out some great destinations!
 </div>
 </br>
 <div class="destination">Hello</br>
-<img src="{{url_for('static', filename='image1.jpg')}}"/></br>
+<img src=url(/static/image1.jpg)/></br>
 </div>
 </br>
 <div class="destination">Hello</div>
