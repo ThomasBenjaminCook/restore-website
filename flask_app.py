@@ -85,19 +85,19 @@ def login():
             response_object.set_cookie("User_Occupation", value = selected_occ, max_age = 31536000, expires = None, path = '/', domain = None, secure = None, httponly = False)
             return response_object
         
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com/browse")
+        return redirect("/browse")
     else:
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com/browse")
+        return redirect("/browse")
     
 @app.route("/browse", methods = ["GET","POST"])
 def browse():
 
     regform = Regi()
     if(request.form.get("brojustsubmitted")):
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com/confirmation")
+        return redirect("/confirmation")
 
     if(request.cookies.get('User_Name') is None):
-        return redirect("https://restore-thomasappmaker.pythonanywhere.com")
+        return redirect("/")
     
     else:
 
@@ -119,3 +119,6 @@ def browse():
 def confirm():
     personform = Adder()
     return render_template_string(lines4, personform=personform)
+
+if __name__ == "__main__":
+    app.run(debug=True)
