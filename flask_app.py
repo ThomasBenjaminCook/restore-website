@@ -4,8 +4,13 @@ from pathlib import Path
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
+from dotenv import load_dotenv
+import os
 
 THIS_FOLDER = Path(__file__).parent.resolve()
+
+# Load environment variables from .env file
+load_dotenv(THIS_FOLDER / ".env")
 
 def stringinserter(string, insertables):
     array = string.split("@")
@@ -45,14 +50,15 @@ with open(THIS_FOLDER / "usersleavecomments.txt") as f:
     lines5 = f.readlines()
 lines5 = (" ").join(lines5)
 
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'REDACTED_SECRET_KEY'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'changeme')
 
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username="REDACTED_DB_USER",
-    password="REDACTED_DB_PASS",
-    hostname="REDACTED_DB_HOST",
-    databasename="REDACTED_DB_NAME",
+    username=os.getenv("SQLALCHEMY_DATABASE_USERNAME", "username"),
+    password=os.getenv("SQLALCHEMY_DATABASE_PASSWORD", "password"),
+    hostname=os.getenv("SQLALCHEMY_DATABASE_HOSTNAME", "hostname"),
+    databasename=os.getenv("SQLALCHEMY_DATABASE_NAME", "databasename"),
 )
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
 app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
