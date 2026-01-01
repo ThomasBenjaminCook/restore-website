@@ -1,79 +1,179 @@
 <head>
-
   <title>Login</title>
-  <link rel="shortcut icon" href="/static/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="/static/logo.png" />
 
   <style>
-
-    body, html {
-      height: 100%;
-      font-size: 200%;
+    :root {
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --text-color: #0f2317;
+      --accent: #0f9b4c;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+      --radius: 18px;
     }
 
-    .bg {
-      background-image: url("/static/background.png");
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #031307;
+      color: var(--text-color);
+    }
+
+    body.bg {
+      background-image: linear-gradient(120deg, rgba(3, 19, 7, 0.9), rgba(3, 19, 7, 0.6)), url("/static/background.png");
       background-position: center;
-      background-repeat: repeat-y;
       background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
     }
 
-    body {
-        padding: 0%;
-        margin: 0%;
+    .card {
+      width: min(560px, 100%);
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 28px 28px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(15, 155, 76, 0.12), rgba(15, 155, 76, 0));
+      pointer-events: none;
     }
 
     .logoimagestyle {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 45vw;
+      margin: 0 auto 16px;
+      width: min(240px, 55vw);
     }
 
-    .formstyle {
-      border: none;
-      outline: none;
-      margin: auto;
+    .headline {
       text-align: center;
-      font-size: 100%;
+      margin: 0 0 18px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    label {
+      font-size: 16px;
+      color: #1c2d22;
+      font-weight: 600;
+    }
+
+    .input-row {
+      display: grid;
+      gap: 6px;
     }
 
     input[type=text] {
-      box-sizing: border-box;
+      width: 100%;
+      border: 2px solid #d6e7dc;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 16px;
+      background: #f9fdf9;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input[type=text]:focus {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(15, 155, 76, 0.18);
+    }
+
+    datalist {
+      font-size: 16px;
+    }
+
+    input[type=submit] {
       border: none;
-      border-bottom: 6px solid green;
-      background: rgba(255,255,255,0.01);
-      font-size: 90%;
-      width: 30vw;
-  }
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(120deg, #0f9b4c, #0d7c3e);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 12px 30px rgba(15, 155, 76, 0.35);
+    }
 
-    input[type=button], input[type=submit] {
-      width: 40vw;
-      height: 6vh;
-      6px solid black;
-      background-color: #000000;
-      color: white;
-      font-size: 80%;
-  }
-    
+    input[type=submit]:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(15, 155, 76, 0.4);
+    }
+
+    input[type=submit]:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 24px rgba(15, 155, 76, 0.32);
+    }
+
+    .helper {
+      text-align: center;
+      font-size: 14px;
+      color: #4a5a50;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 520px) {
+      body.bg {
+        padding: 16px;
+      }
+      .card {
+        padding: 22px;
+      }
+      .headline {
+        font-size: 20px;
+      }
+    }
   </style>
-
 </head>
 
 <body class="bg">
-    </br></br>
-    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle"/>
-    </br>
-    <form method="POST" class="formstyle">
-    <fieldset class="formstyle">
-        <label for="namein">My name is </label> 
-        {{ personform.hidden_tag() }} 
-        {{ personform.personname(autocomplete="off") }}
-        <label for="jobin"></br>and I'm a </label> 
-        {{ personform.hidden_tag() }} 
-        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off") }}<datalist id="optioner"><option value="tourist"><option value="landowner"></datalist>.<br><br>
-        {{ personform.submitter() }}
-    </fieldset>
+  <section class="card">
+    <img src="{{url_for('static', filename='logo.png')}}" class="logoimagestyle" alt="Restore and More" />
+    <h1 class="headline">Welcome back</h1>
+
+    <form method="POST">
+      {{ personform.hidden_tag() }}
+
+      <div class="input-row">
+        <label for="personname">My name is</label>
+        {{ personform.personname(autocomplete="off", id="personname", placeholder="Pat Lee") }}
+      </div>
+
+      <div class="input-row">
+        <label for="occupation">and I'm a</label>
+        {{ personform.occupation(class="form-control", list="optioner", autocomplete="off", id="occupation", placeholder="tourist, explorer, landowner") }}
+        <datalist id="optioner">
+          <option value="tourist">
+          <option value="explorer">
+          <option value="landowner">
+        </datalist>
+      </div>
+
+      {{ personform.submitter(class="submit") }}
     </form>
 
+    <p class="helper">We tailor the experience to your role and interests.</p>
+  </section>
 </body>
