@@ -6,6 +6,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from dotenv import load_dotenv
 import os
+import re
 
 THIS_FOLDER = Path(__file__).parent.resolve()
 
@@ -13,13 +14,13 @@ THIS_FOLDER = Path(__file__).parent.resolve()
 load_dotenv(THIS_FOLDER / ".env")
 
 def stringinserter(string, insertables):
-    array = string.split("@")
-    outputarray = []
-    for x in range(len(array)):
-        outputarray.append(array[x])
-        if x < len(insertables):
-            outputarray.append(insertables[x])
-    return(("").join(outputarray))
+    # Replace only standalone @ tokens so @media in CSS isn't altered
+    iterator = iter(insertables)
+
+    def _replace(match):
+        return next(iterator, match.group(0))
+
+    return re.sub(r"(?<!\w)@(?!\w)", _replace, string)
 
 class Adder(FlaskForm):
     personname = StringField()
